@@ -18,7 +18,7 @@ var sequeue = {
     // create queue object
     this._queues[queueId] = {
       step: 0,
-      list: list.concat([this._remove.bind(this, queueId)])
+      list: list.concat(this._remove.bind(this, queueId))
     };
 
     // start queue

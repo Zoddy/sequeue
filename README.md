@@ -8,7 +8,7 @@ $ npm install sequeue
 
 ```js
 // usage
-var sequeue = require('./sequeue');
+var sequeue = require('sequeue');
 
 sequeue([
   function(next) {

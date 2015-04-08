@@ -1,0 +1,22 @@
+{
+  "name": "sequeue",
+  "version": "1.0.0",
+  "description": "very basic sequential function queue",
+  "main": "sequeue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zoddy/sequeue.git"
+  },
+  "keywords": [
+    "queue"
+  ],
+  "author": "André Kussmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zoddy/sequeue/issues"
+  },
+  "homepage": "https://github.com/Zoddy/sequeue"
+}

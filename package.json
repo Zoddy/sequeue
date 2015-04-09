@@ -1,6 +1,6 @@
 {
   "name": "sequeue",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "very basic sequential function queue",
   "main": "sequeue.js",
   "scripts": {

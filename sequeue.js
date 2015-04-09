@@ -10,7 +10,7 @@ var sequeue = {
    * create a new queue
    *
    * @param {array<function>} list a list of functions
-   * @return {string} the generated uuid for the queue
+   * @return {number} the id of the queue
    */
   add: function(list) {
     // create queue object
@@ -28,7 +28,7 @@ var sequeue = {
   /**
    * queue is finished so just remove it from the queue list
    *
-   * @param {string} queueId UUID of the queue
+   * @param {number} queueId id of the queue
    */
   _remove: function(queueId) {
     this._queues[queueId] = undefined;
@@ -37,7 +37,7 @@ var sequeue = {
   /**
    * go to the next step of the queue
    *
-   * @param {string} queueId UUID of the queue
+   * @param {number} queueId id of the queue
    */
   _next: function(queueId) {
     var queue = this._queues[queueId];

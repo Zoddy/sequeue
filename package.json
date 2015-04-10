@@ -1,10 +1,10 @@
 {
   "name": "sequeue",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "very basic sequential function queue",
   "main": "sequeue.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/testrunner.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Zoddy/sequeue/issues"
   },
-  "homepage": "https://github.com/Zoddy/sequeue"
+  "homepage": "https://github.com/Zoddy/sequeue",
+  "devDependencies": {
+    "chai": "2.2.0",
+    "mocha": "2.2.4"
+  }
 }

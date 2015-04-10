@@ -14,12 +14,9 @@ var sequeue = {
    */
   add: function(list) {
     // create queue object
-    var queueId = this._queues.push({
-      step: 0,
-      list: list.concat(this._remove.bind(this, queueId))
-    }) - 1;
+    var queueId = this._queues.length;
 
-    // start queue
+    this._queues.push(list.concat(this._remove.bind(this, queueId)));
     process.nextTick(this._next.bind(this, queueId));
 
     return queueId;
@@ -40,9 +37,7 @@ var sequeue = {
    * @param {number} queueId id of the queue
    */
   _next: function(queueId) {
-    var queue = this._queues[queueId];
-
-    queue.list[queue.step++](this._next.bind(this, queueId));
+    this._queues[queueId].shift()(this._next.bind(this, queueId));
   }
 };
 

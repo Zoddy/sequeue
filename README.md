@@ -6,6 +6,8 @@ sequeue
 $ npm install sequeue
 ```
 
+CommonJS
+
 ```js
 // usage
 var sequeue = require('sequeue');
@@ -26,6 +28,32 @@ sequeue([
 // will output:
 // 1
 // 2
+```
+
+Wihout module loader
+```js
+(function(window) {
+  // usage
+  var sequeue = window.sequeue;
+
+  sequeue([
+    function(next) {
+      setTimeout(function() {
+        console.log(1);
+        next();
+      }, 1000);
+    },
+    function(next) {
+      console.log(2);
+      next();
+    }
+  ]);
+
+  // will output:
+  // 1
+  // 2
+
+})(window);
 ```
 
 Sequeue is working fine with :

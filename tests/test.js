@@ -26,7 +26,6 @@ it('[sync] should be an array with content 1 & 2 & 3', function(done) {
       expect(result).to.deep.equal([1, 2, 3]);
 
       done();
-      next();
     }
   ]);
 });
@@ -54,7 +53,16 @@ it('[async] should be an array with content 1 & 2 & 3', function(done) {
       expect(result).to.deep.equal([1, 2, 3]);
 
       done();
-      next();
     }
+  ]);
+});
+
+it('[binding] should have the right scope', function(done) {
+  require('../sequeue')([
+    function() {
+      expect(this).to.be.an('object');
+      expect(this.foo).to.be.equal('bar');
+      done();
+    }.bind({'foo': 'bar'})
   ]);
 });

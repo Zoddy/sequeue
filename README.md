@@ -17,9 +17,10 @@ sequeue([
       next();
     }, 1000);
   },
-  function(next) {
+  function() {
     console.log(2);
-    next();
+    // last function should not call next()
+    // otherwise you will get an "undefined is not a function"
   }
 ]);
 

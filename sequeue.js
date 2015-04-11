@@ -9,9 +9,7 @@
  */
 var sequeue = function(queue) {
   queue = [].concat(queue);
-  process.nextTick(function() {
-    queue.shift()(sequeue.bind(null, queue));
-  });
+  process.nextTick(queue.shift().bind(null, sequeue.bind(null, queue)));
 };
 
 module.exports = sequeue;

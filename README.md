@@ -27,3 +27,8 @@ sequeue([
 // 1
 // 2
 ```
+
+Sequeue is working fine with :
+- commonJS (node.js/io.js context & [http://browserify.org/](browserify))
+- AMD ([http://requirejs.org/](require.js))
+- wihout using any module loader via `window.sequeue`

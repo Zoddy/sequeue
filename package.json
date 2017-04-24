@@ -4,6 +4,7 @@
   "description": "very basic sequential function queue",
   "main": "sequeue.js",
   "scripts": {
+    "lint": "standard sequeue.js",
     "test": "node tests/testrunner.js"
   },
   "repository": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/Zoddy/sequeue",
   "devDependencies": {
     "chai": "2.2.0",
-    "mocha": "2.2.4"
+    "mocha": "2.2.4",
+    "standard": "10.0.2"
   }
 }
